@@ -1,19 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/primary"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Header Section-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="5"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text=" ZAKAT\n CALCULATOR"
+            android:textColor="#00BCD4"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_weight="3"
+            app:drawableLeftCompat="@drawable/zakat"
+            />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:textColor="#FBD156"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            android:drawableEnd="@drawable/faq"
+            android:background="@drawable/singecolor_button"
+            android:clickable="true"
+            android:text="FAQ"
+            />
+
+    </LinearLayout>
+
+    <!-- Main Section -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:padding="5dp"
+        android:background="@color/white"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Calcualte"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:paddingTop="15dp"
+            android:drawableTop="@drawable/calculate"
+            android:background="@drawable/two_color_curved"
+            android:layout_weight="1"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Gold RATE"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:paddingTop="15dp"
+            android:drawableTop="@drawable/gold"
+            android:background="@drawable/two_color_curved"
+            android:layout_weight="1"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Silver Rate"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:paddingTop="15dp"
+            android:drawableTop="@drawable/silver"
+            android:background="@drawable/two_color_curved"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+    <!--Blog Section-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:background="@color/white"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blogs:"
+                android:textColor="#7C8080"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                />
+
+            <!-- Card 1 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:background="@drawable/bottom_curved"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                >
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/blog1"
+                    android:scaleType="fitXY"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zakat: The Third Pillar of Islam"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:maxLines="1"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zakat, the third pillar of Islam, is an obligatory act upon all qualifying Muslims and is the undertaking of submitting a set percentage of his or her profitable wealth to charity."
+                        android:textColor="#363737"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Read More..........."
+                        android:textColor="#00BCD4"
+                        android:textSize="12sp"
+                        android:maxLines="2"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Card 2 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:background="@drawable/bottom_curved"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                >
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/blog2"
+                    android:scaleType="fitXY"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="What are the Zakat Rules and Who is Eligible to Pay It?"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:maxLines="1"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zakat is an important obligation in Islam. As the third pillar of the faith, it forms the basis of worship and devotion in a Muslim’s life. Charity, in general, has been given great importance in the faith. According to the above verse, spending in obedience to Allah (SWT) makes a believer deserving of divine blessings."
+                        android:textColor="#363737"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Read More..........."
+                        android:textColor="#00BCD4"
+                        android:textSize="12sp"
+                        android:maxLines="2"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Card 3 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:background="@drawable/bottom_curved"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                >
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/blog3"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Differences of Zakat and Sadaqah"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:maxLines="1"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Every year, approximately two billion people across the globe observe Ramadan, fasting for thirty days as an act of spiritual discipline. Yet, Ramadan, the holiest month in the Islamic Hijri calendar, is about more than merely reinforcing one’s faith. Beginning and ending with the appearance of the crescent moon, Ramadan is period of reflection that encourages Muslims to think of others and give generously to those less fortunate than themselves. Central to this charitable ethos are Zakat and Sadaqah. Combined, the two play a major role in alleviating the difficulties underprivileged communities face, especially during the holy month."
+                        android:textColor="#363737"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Read More..........."
+                        android:textColor="#00BCD4"
+                        android:textSize="12sp"
+                        android:maxLines="2"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
