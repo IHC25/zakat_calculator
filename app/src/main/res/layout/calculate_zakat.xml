@@ -3,8 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@color/primary"
+    tools:context=".CalculateZakat"
     android:id="@+id/calculateLayout">
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,44 +17,18 @@
 
         <!-- Header Section-->
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="5dp"
-            android:weightSum="5"
-            >
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="10dp"
-                android:text=" ZAKAT\n CALCULATOR"
-                android:textColor="#00BCD4"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_weight="3"
-                app:drawableStartCompat="@drawable/zakat"
-                />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:focusable="true"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:padding="5dp"
-                android:layout_margin="10dp"
-                android:textColor="#FBD156"
-                android:textStyle="bold"
-                android:layout_weight="2"
-                android:drawableEnd="@drawable/faq"
-                android:background="@drawable/singecolor_button"
-                android:clickable="true"
-                android:text="FAQ"
-                />
-
-        </LinearLayout>
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text=" ZAKAT\n CALCULATOR"
+            android:textColor="#00BCD4"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@color/white"
+            app:drawableStartCompat="@drawable/zakat"
+            />
         <!-- Standard Selection -->
         <LinearLayout
             android:id="@+id/standard"
@@ -63,9 +39,20 @@
             android:layout_margin="10dp"
             android:layout_gravity="center"
             android:background="@drawable/bottom_curved"
-            android:visibility="gone"
+            android:visibility="visible"
             >
             <!-- Standard Selection (Radio Buttons) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step 1 of 3"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:textColor="#4DB6AC"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                />
+
             <TextView
                 android:id="@+id/nisab_label"
                 android:layout_width="wrap_content"
@@ -129,6 +116,83 @@
                    />
            </LinearLayout>
         </LinearLayout>
+        <!-- Gold and Silver Price Section -->
+        <LinearLayout
+            android:id="@+id/gold_silver_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bottom_curved"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step 2 of 3"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:textColor="#4DB6AC"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                />
+            <!-- Standard Selection (Radio Buttons) -->
+            <TextView
+                android:id="@+id/gs_price_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Input Gold and Silver Price in BDT"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+                <EditText
+                    android:id="@+id/gold_price_input"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:hint="1 Vori 24K Gold "
+                    />
+                <EditText
+                    android:id="@+id/sliver_price_input"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="1 Tola 24k Silver"
+                    />
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_margin="10dp"
+                >
+                <TextView
+                    android:id="@+id/continueToCalc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#00BCD4"
+                    />
+            </LinearLayout>
+        </LinearLayout>
 
             <!-- Assets and Liability Info -->
             <LinearLayout
@@ -142,8 +206,18 @@
                 android:layout_margin="10dp"
                 android:layout_gravity="center"
                 android:background="@drawable/bottom_curved"
-                android:visibility="visible"
+                android:visibility="gone"
                 >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step 3 of 3"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:textColor="#4DB6AC"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -156,34 +230,100 @@
                     android:id="@+id/gold_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gold (Value in BDT)"
+                    android:text="Gold (Vori)"
                     android:layout_marginTop="8dp"
                     />
-
-                <EditText
-                    android:id="@+id/gold_bori_input"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="Value of Gold you own"
+                    android:text="*Only type the quantity of different types of gold you own."
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#F06292"
                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    >
+                    <EditText
+                        android:id="@+id/gold_18k_input"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="18k Gold"
+                        />
+                    <EditText
+                        android:id="@+id/gold_21k_input"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="21k Gold"
+                        />
+                    <EditText
+                        android:id="@+id/gold_22k_input"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="22k Gold"
+                        />
+                    <EditText
+                        android:id="@+id/gold_24k_input"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="24k Gold"
+                        />
+
+                </LinearLayout>
 
                 <!-- Silver Input -->
                 <TextView
                     android:id="@+id/silver_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Silver (Value in BDT)"
+                    android:text="Silver (Tola)"
                     android:layout_marginTop="8dp"
                     />
-
-                <EditText
-                    android:id="@+id/silver_input"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="Value of Silver you own"
+                    android:text="*Only type the quantity of different types of silver you own."
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#F06292"
                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+                    <EditText
+                        android:id="@+id/silver_sterling_input"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Sterling Silver"
+                        />
+                    <EditText
+                        android:id="@+id/silver_fine_input"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Fine Silver"
+                        />
+
+                </LinearLayout>
 
                 <!-- Cash Input -->
                 <TextView

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculationResult"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculationResult"
+    android:orientation="vertical"
+    android:background="@color/primary"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text=" ZAKAT\n CALCULATOR"
+        android:textColor="#00BCD4"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="@color/white"
+        app:drawableStartCompat="@drawable/zakat"
+        />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zakat_giving"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text=" ZAKAT CALCULATION RESULT"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:text=" ZAKAT Payable Amount:"
+        android:textColor="#2F4F5A"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:id="@+id/zakatAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="25000 TK "
+        android:textColor="#FD725C"
+        android:textSize="25sp"
+        android:gravity="center"
+        />
+
+
+
+
+</LinearLayout>
