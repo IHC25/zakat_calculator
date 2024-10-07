@@ -62,6 +62,7 @@
         android:background="@color/white"
         >
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/calculateZakat"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Calcualte"
@@ -75,6 +76,7 @@
             android:layout_weight="1"
             />
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goldRate"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Gold RATE"
@@ -88,6 +90,7 @@
             android:layout_weight="1"
             />
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/silverRate"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Silver Rate"
@@ -129,6 +132,7 @@
             <!-- Card 1 -->
 
             <LinearLayout
+                android:id="@+id/blog1"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:orientation="horizontal"
@@ -185,53 +189,53 @@
             <!-- Card 2 -->
 
             <LinearLayout
+                android:id="@+id/blog2"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:orientation="horizontal"
-                android:weightSum="3"
-                android:background="@drawable/bottom_curved"
                 android:layout_margin="5dp"
+                android:background="@drawable/bottom_curved"
+                android:orientation="horizontal"
                 android:padding="5dp"
-                >
+                android:weightSum="3">
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/blog2"
-                    android:scaleType="fitXY"
-                    android:layout_weight="1"
                     android:layout_margin="10dp"
-                    />
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/blog2" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
                     android:layout_margin="20dp"
-                    android:orientation="vertical"
-                    >
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxLines="1"
                         android:text="What are the Zakat Rules and Who is Eligible to Pay It?"
                         android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:maxLines="1"
-                        />
+                        android:textSize="15sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxLines="4"
                         android:text="Zakat is an important obligation in Islam. As the third pillar of the faith, it forms the basis of worship and devotion in a Muslim’s life. Charity, in general, has been given great importance in the faith. According to the above verse, spending in obedience to Allah (SWT) makes a believer deserving of divine blessings."
                         android:textColor="#363737"
-                        android:textSize="12sp"
-                        android:maxLines="4"
-                        />
+                        android:textSize="12sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxLines="2"
                         android:text="Read More..........."
                         android:textColor="#00BCD4"
-                        android:textSize="12sp"
-                        android:maxLines="2"
-                        />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -241,53 +245,53 @@
             <!-- Card 3 -->
 
             <LinearLayout
+                android:id="@+id/blog3"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:orientation="horizontal"
-                android:weightSum="3"
-                android:background="@drawable/bottom_curved"
                 android:layout_margin="5dp"
+                android:background="@drawable/bottom_curved"
+                android:orientation="horizontal"
                 android:padding="5dp"
-                >
+                android:weightSum="3">
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/blog3"
-                    android:scaleType="centerCrop"
-                    android:layout_weight="1"
                     android:layout_margin="10dp"
-                    />
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/blog3" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
                     android:layout_margin="20dp"
-                    android:orientation="vertical"
-                    >
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxLines="1"
                         android:text="Differences of Zakat and Sadaqah"
                         android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:maxLines="1"
-                        />
+                        android:textSize="15sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxLines="4"
                         android:text="Every year, approximately two billion people across the globe observe Ramadan, fasting for thirty days as an act of spiritual discipline. Yet, Ramadan, the holiest month in the Islamic Hijri calendar, is about more than merely reinforcing one’s faith. Beginning and ending with the appearance of the crescent moon, Ramadan is period of reflection that encourages Muslims to think of others and give generously to those less fortunate than themselves. Central to this charitable ethos are Zakat and Sadaqah. Combined, the two play a major role in alleviating the difficulties underprivileged communities face, especially during the holy month."
                         android:textColor="#363737"
-                        android:textSize="12sp"
-                        android:maxLines="4"
-                        />
+                        android:textSize="12sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxLines="2"
                         android:text="Read More..........."
                         android:textColor="#00BCD4"
-                        android:textSize="12sp"
-                        android:maxLines="2"
-                        />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
