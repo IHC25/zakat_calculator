@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout blog1, blog2, blog3;
-    Button goldRate, silverRate;
+    Button goldRate, silverRate, calculateZakat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         blog3 = findViewById(R.id.blog3);
         goldRate = findViewById(R.id.goldRate);
         silverRate = findViewById(R.id.silverRate);
+        calculateZakat = findViewById(R.id.calculateZakat);
 
         blog1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +82,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        calculateZakat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CalculateZakat.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
