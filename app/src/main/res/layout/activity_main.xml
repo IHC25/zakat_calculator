@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/primary"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
     <!-- Header Section-->
 
@@ -16,38 +15,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="5dp"
         android:weightSum="5"
         >
+
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
             android:text=" ZAKAT\n CALCULATOR"
             android:textColor="#00BCD4"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_weight="3"
             app:drawableLeftCompat="@drawable/zakat"
+            android:paddingVertical="18dp"
             />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/faqButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:focusable="true"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:padding="5dp"
             android:layout_margin="10dp"
-            android:textColor="#FBD156"
-            android:textStyle="bold"
             android:layout_weight="2"
-            android:drawableEnd="@drawable/faq"
             android:background="@drawable/singecolor_button"
             android:clickable="true"
+            android:drawableEnd="@drawable/faq"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="10dp"
             android:text="FAQ"
-            />
+            android:textColor="#FBD156"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -56,78 +54,76 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        android:padding="5dp"
         android:background="@color/white"
-        >
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="3">
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/calculateZakat"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/two_color_curved"
+            android:drawableTop="@drawable/calculate"
+            android:paddingTop="15dp"
             android:text="Calcualte"
             android:textColor="@color/primary"
-            android:textStyle="bold"
             android:textSize="15sp"
-            android:layout_margin="5dp"
-            android:paddingTop="15dp"
-            android:drawableTop="@drawable/calculate"
-            android:background="@drawable/two_color_curved"
-            android:layout_weight="1"
-            />
+            android:textStyle="bold" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/goldRate"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/two_color_curved"
+            android:drawableTop="@drawable/gold"
+            android:paddingTop="15dp"
             android:text="Gold RATE"
             android:textColor="@color/primary"
-            android:textStyle="bold"
             android:textSize="15sp"
-            android:layout_margin="5dp"
-            android:paddingTop="15dp"
-            android:drawableTop="@drawable/gold"
-            android:background="@drawable/two_color_curved"
-            android:layout_weight="1"
-            />
+            android:textStyle="bold" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/silverRate"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/two_color_curved"
+            android:drawableTop="@drawable/silver"
+            android:paddingTop="15dp"
             android:text="Silver Rate"
             android:textColor="@color/primary"
-            android:textStyle="bold"
             android:textSize="15sp"
-            android:layout_margin="5dp"
-            android:paddingTop="15dp"
-            android:drawableTop="@drawable/silver"
-            android:background="@drawable/two_color_curved"
-            android:layout_weight="1"
-            />
+            android:textStyle="bold" />
 
 
     </LinearLayout>
     <!--Blog Section-->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
-            android:padding="5dp"
             android:background="@color/white"
-            >
+            android:orientation="vertical"
+            android:padding="5dp">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:text="Blogs:"
                 android:textColor="#7C8080"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                />
+                android:textStyle="bold" />
 
             <!-- Card 1 -->
 
@@ -135,51 +131,50 @@
                 android:id="@+id/blog1"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:orientation="horizontal"
-                android:weightSum="3"
-                android:background="@drawable/bottom_curved"
                 android:layout_margin="5dp"
+                android:background="@drawable/bottom_curved"
+                android:orientation="horizontal"
                 android:padding="5dp"
-                >
+                android:weightSum="3">
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/blog1"
-                    android:scaleType="fitXY"
-                    android:layout_weight="1"
                     android:layout_margin="10dp"
-                    />
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/blog1" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
                     android:layout_margin="20dp"
-                    android:orientation="vertical"
-                    >
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxLines="1"
                         android:text="Zakat: The Third Pillar of Islam"
                         android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:maxLines="1"
-                        />
+                        android:textSize="15sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxLines="4"
                         android:text="Zakat, the third pillar of Islam, is an obligatory act upon all qualifying Muslims and is the undertaking of submitting a set percentage of his or her profitable wealth to charity."
                         android:textColor="#363737"
-                        android:textSize="12sp"
-                        android:maxLines="4"
-                        />
+                        android:textSize="12sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxLines="2"
                         android:text="Read More..........."
                         android:textColor="#00BCD4"
-                        android:textSize="12sp"
-                        android:maxLines="2"
-                        />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 

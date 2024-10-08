@@ -7,6 +7,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.window.OnBackInvokedDispatcher;
 
 import androidx.annotation.NonNull;
@@ -19,7 +20,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class WebLoader extends AppCompatActivity{
 
     WebView browser;
-    Button backButton;
+    ImageView backButton;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

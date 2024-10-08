@@ -3,9 +3,6 @@ package com.imran.zakatcalculator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.CookieManager;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -17,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout blog1, blog2, blog3;
-    Button goldRate, silverRate, calculateZakat;
+    Button goldRate, silverRate, calculateZakat, faqButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         goldRate = findViewById(R.id.goldRate);
         silverRate = findViewById(R.id.silverRate);
         calculateZakat = findViewById(R.id.calculateZakat);
+        faqButton = findViewById(R.id.faqButton);
 
         blog1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +85,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CalculateZakat.class);
+                startActivity(intent);
+            }
+        });
+
+        faqButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Faq.class);
                 startActivity(intent);
             }
         });

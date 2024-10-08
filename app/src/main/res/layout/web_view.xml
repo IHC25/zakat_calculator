@@ -6,15 +6,14 @@
     android:orientation="vertical"
     android:background="@color/primary"
     tools:context=".WebLoader"
-    android:id="@+id/webLayout">
+    android:id="@+id/webLayout"
+    >
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageView
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:background="@drawable/singecolor_button"
-        android:drawableStart="@drawable/back"
-        android:text="  Back"
+        android:src="@drawable/back"
         android:textColor="#00BCD4"
         android:textSize="25sp"
         android:textStyle="bold"

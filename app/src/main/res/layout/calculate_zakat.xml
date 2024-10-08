@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/calculateLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/primary"
-    tools:context=".CalculateZakat"
-    android:id="@+id/calculateLayout">
+    android:orientation="vertical"
+    tools:context=".CalculateZakat">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp"
-        >
+        android:padding="10dp">
 
         <!-- Header Section-->
 
@@ -21,48 +21,44 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@color/white"
             android:padding="10dp"
             android:text=" ZAKAT\n CALCULATOR"
             android:textColor="#00BCD4"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:background="@color/white"
-            app:drawableStartCompat="@drawable/zakat"
-            />
+            app:drawableStartCompat="@drawable/zakat" />
         <!-- Standard Selection -->
         <LinearLayout
-            android:id="@+id/standard"
+            android:id="@+id/standardSelection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/bottom_curved"
             android:orientation="vertical"
             android:padding="10dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:background="@drawable/bottom_curved"
-            android:visibility="visible"
-            >
+            android:visibility="visible">
             <!-- Standard Selection (Radio Buttons) -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Step 1 of 3"
-                android:textSize="14sp"
-                android:textStyle="italic"
-                android:textColor="#4DB6AC"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="center"
-                />
+                android:layout_marginTop="5dp"
+                android:text="Step 1 of 4"
+                android:textColor="#4DB6AC"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/nisab_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Select Nisab Standard"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                android:textColor="@color/black"
                 android:layout_marginTop="16dp"
-                />
+                android:text="Select Nisab Standard"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <RadioGroup
                 android:id="@+id/nisab_standard_group"
@@ -71,14 +67,13 @@
 
                 <!-- Suggestion-->
                 <TextView
-                    android:visibility="visible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Muslim scholars suggest choosing Silver if you want to be cautious and include more people in the eligibility. However, Gold may be chosen for a higher threshold."
-                    android:textSize="16sp"
                     android:layout_marginTop="8dp"
+                    android:text="Muslim scholars suggest choosing Silver if you want to be cautious and include more people in the eligibility. However, Gold may be chosen for a higher threshold."
                     android:textColor="#888888"
-                    />
+                    android:textSize="16sp"
+                    android:visibility="visible" />
 
                 <RadioButton
                     android:id="@+id/gold_radio"
@@ -86,8 +81,7 @@
                     android:layout_height="wrap_content"
                     android:text="Gold"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    />
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/silver_radio"
@@ -95,387 +89,446 @@
                     android:layout_height="wrap_content"
                     android:text="Silver"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    />
+                    android:textSize="20sp" />
             </RadioGroup>
 
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:gravity="end"
-               android:layout_margin="10dp"
-               >
-               <TextView
-                   android:id="@+id/continueToCalc"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Continue"
-                   android:textSize="18sp"
-                   android:textStyle="bold"
-                   android:textColor="#00BCD4"
-                   />
-           </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/continueToCalc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:textColor="#00BCD4"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
+
         <!-- Gold and Silver Price Section -->
         <LinearLayout
             android:id="@+id/gold_silver_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/bottom_curved"
             android:orientation="vertical"
             android:padding="10dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:background="@drawable/bottom_curved"
-            android:visibility="gone"
-            >
+            android:visibility="gone">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Step 2 of 3"
-                android:textSize="14sp"
-                android:textStyle="italic"
-                android:textColor="#4DB6AC"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="center"
-                />
+                android:layout_marginTop="5dp"
+                android:text="Step 2 of 4"
+                android:textColor="#4DB6AC"
+                android:textSize="14sp"
+                android:textStyle="bold" />
             <!-- Standard Selection (Radio Buttons) -->
             <TextView
                 android:id="@+id/gs_price_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Input Gold and Silver Price in BDT"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                android:textColor="@color/black"
                 android:layout_marginTop="16dp"
-                />
+                android:text="Input Gold and Silver Price in BDT"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+            <!-- Suggestion-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="You need to give Gold and Silver prices in BDT for calculation of your owned gold and silver. This prices are required even if you don't have this assets."
+                android:textColor="#888888"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                >
+                android:weightSum="2">
+
                 <EditText
                     android:id="@+id/gold_price_input"
-                    android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="1 Vori 24K Gold "
-                    />
+                    android:layout_weight="1"
+                    android:hint="22K Gold/Gram"
+                    android:inputType="numberDecimal" />
+
                 <EditText
                     android:id="@+id/sliver_price_input"
-                    android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="1 Tola 24k Silver"
-                    />
+                    android:layout_weight="1"
+                    android:hint="22K Silver/Gram"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gs_price_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/two_color_curved"
+                android:paddingHorizontal="20dp"
+                android:text="Check Gold &amp; Silver Price"
+                android:textColor="@color/primary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="end"
-                android:layout_margin="10dp"
-                >
+                android:layout_margin="15dp"
+                android:gravity="end">
+
                 <TextView
                     android:id="@+id/continueToCalc2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Continue"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
                     android:textColor="#00BCD4"
-                    />
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
 
-            <!-- Assets and Liability Info -->
-            <LinearLayout
-                android:id="@+id/assetInfo"
+        <!-- Assets Info Section -->
+        <LinearLayout
+            android:id="@+id/assetInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/bottom_curved"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="30dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Step 3 of 4"
+                android:textColor="#4DB6AC"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Enter your Zakatable Assets"
+                android:textSize="18sp" />
+            <!-- Gold Input -->
+            <TextView
+                android:id="@+id/gold_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Gold (Vori)" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="10dp"
-                android:paddingBottom="30dp"
-                android:paddingHorizontal="15dp"
-                android:layout_margin="10dp"
-                android:layout_gravity="center"
-                android:background="@drawable/bottom_curved"
-                android:visibility="gone"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Step 3 of 3"
-                    android:textSize="14sp"
-                    android:textStyle="italic"
-                    android:textColor="#4DB6AC"
-                    android:layout_marginTop="5dp"
-                    android:layout_gravity="center"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Enter your Zakatable Assets"
-                    android:textSize="18sp"
-                    android:layout_marginTop="24dp"
-                    />
-                <!-- Gold Input -->
-                <TextView
-                    android:id="@+id/gold_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gold (Vori)"
-                    android:layout_marginTop="8dp"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="*Only type the quantity of different types of gold you own."
-                    android:textSize="12sp"
-                    android:layout_marginTop="2dp"
-                    android:textColor="#F06292"
-                    />
+                android:layout_marginTop="2dp"
+                android:text="*Only type the quantity of different types of gold you own."
+                android:textColor="#F06292"
+                android:textSize="12sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="4"
-                    >
-                    <EditText
-                        android:id="@+id/gold_18k_input"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:hint="18k Gold"
-                        />
-                    <EditText
-                        android:id="@+id/gold_21k_input"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:hint="21k Gold"
-                        />
-                    <EditText
-                        android:id="@+id/gold_22k_input"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:hint="22k Gold"
-                        />
-                    <EditText
-                        android:id="@+id/gold_24k_input"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:hint="24k Gold"
-                        />
-
-                </LinearLayout>
-
-                <!-- Silver Input -->
-                <TextView
-                    android:id="@+id/silver_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Silver (Tola)"
-                    android:layout_marginTop="8dp"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="*Only type the quantity of different types of silver you own."
-                    android:textSize="12sp"
-                    android:layout_marginTop="2dp"
-                    android:textColor="#F06292"
-                    />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="2"
-                    >
-                    <EditText
-                        android:id="@+id/silver_sterling_input"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:hint="Sterling Silver"
-                        />
-                    <EditText
-                        android:id="@+id/silver_fine_input"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:hint="Fine Silver"
-                        />
-
-                </LinearLayout>
-
-                <!-- Cash Input -->
-                <TextView
-                    android:id="@+id/cash_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cash (BDT)"
-                    android:layout_marginTop="8dp"
-                    />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
 
                 <EditText
-                    android:id="@+id/cash_input"
-                    android:layout_width="match_parent"
+                    android:id="@+id/gold_18k_input"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="Cash at home &amp; bank accounts"
-                    />
-                <!-- Money Owed Input -->
-                <TextView
-                    android:id="@+id/money_owed_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Money Owed (BDT)"
-                    android:layout_marginTop="8dp"
-                    />
+                    android:layout_weight="1"
+                    android:hint="18k"
+                    android:inputType="numberDecimal" />
 
                 <EditText
-                    android:id="@+id/money_owed_input"
-                    android:layout_width="match_parent"
+                    android:id="@+id/gold_21k_input"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="Money owed to you"
-                    />
-
-                <!-- Business Assets Input -->
-                <TextView
-                    android:id="@+id/business_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Business Assets (BDT)"
-                    android:layout_marginTop="8dp" />
+                    android:layout_weight="1"
+                    android:hint="21k"
+                    android:inputType="numberDecimal" />
 
                 <EditText
-                    android:id="@+id/business_input"
-                    android:layout_width="match_parent"
+                    android:id="@+id/gold_22k_input"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="Value of investments and shares"
-                    />
-
-                <!-- Goods Input -->
-                <TextView
-                    android:id="@+id/goods_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Goods (BDT)"
-                    android:layout_marginTop="8dp"
-                    />
+                    android:layout_weight="1"
+                    android:hint="22k"
+                    android:inputType="numberDecimal" />
 
                 <EditText
-                    android:id="@+id/goods_input"
-                    android:layout_width="match_parent"
+                    android:id="@+id/gold_traditional_input"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="Value of goods in stock for sale"
-                    />
+                    android:layout_weight="2"
+                    android:hint="Traditional"
+                    android:inputType="numberDecimal" />
 
-                <!-- other Input -->
-                <TextView
-                    android:id="@+id/other_assets_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Other Assets (BDT)"
-                    android:layout_marginTop="8dp"
-                    />
-
-                <EditText
-                    android:id="@+id/other_assets_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="Value of Other Assets"
-                    />
-
-                <!-- Liabilities Section -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Liabilities and Debts"
-                    android:textSize="18sp"
-                    android:layout_marginTop="24dp" />
-
-                <!-- Outstanding Debts Input -->
-                <TextView
-                    android:id="@+id/debts_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Debts (BDT)"
-                    android:layout_marginTop="8dp" />
-
-                <EditText
-                    android:id="@+id/debts_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="Your debts and obligations" />
-
-                <!-- Expenses Input -->
-                <TextView
-                    android:id="@+id/expense_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Expenses (tax, rent, bills)"
-                    android:layout_marginTop="8dp" />
-
-                <EditText
-                    android:id="@+id/expense_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="Unpaid tax, rent, bills, etc." />
-
-                <!-- Other expenses Input -->
-                <TextView
-                    android:id="@+id/other_expense_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Debts (BDT)"
-                    android:layout_marginTop="8dp" />
-
-                <EditText
-                    android:id="@+id/other_expense_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="Other unpaid expenses" />
-
-                <!-- Submit Button -->
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/calculate_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Calculate Zakat"
-                    android:layout_marginTop="24dp"
-                    android:paddingHorizontal="24dp"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/two_color_curved"
-                    />
             </LinearLayout>
 
+            <!-- Silver Input -->
+            <TextView
+                android:id="@+id/silver_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Silver (Tola)" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="*Only type the quantity of different types of silver you own."
+                android:textColor="#F06292"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <EditText
+                    android:id="@+id/silver_22K_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="22k"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/silver_21k_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="21K"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/silver_18K_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="18k"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/silver_traditional_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="Traditional"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
+
+            <!-- Cash Input -->
+            <TextView
+                android:id="@+id/cash_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cash (BDT)" />
+
+            <EditText
+                android:id="@+id/cash_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cash at home &amp; bank accounts"
+                android:inputType="numberDecimal" />
+            <!-- Money Owed Input -->
+            <TextView
+                android:id="@+id/money_owed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Money Owed (BDT)" />
+
+            <EditText
+                android:id="@+id/money_owed_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Money owed to you"
+                android:inputType="numberDecimal" />
+
+            <!-- Business Assets Input -->
+            <TextView
+                android:id="@+id/business_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Business Assets (BDT)" />
+
+            <EditText
+                android:id="@+id/business_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Value of investments and shares"
+                android:inputType="numberDecimal" />
+
+            <!-- Goods Input -->
+            <TextView
+                android:id="@+id/goods_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Goods (BDT)" />
+
+            <EditText
+                android:id="@+id/goods_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Value of goods in stock for sale"
+                android:inputType="numberDecimal" />
+
+            <!-- other Input -->
+            <TextView
+                android:id="@+id/other_assets_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Other Assets (BDT)" />
+
+            <EditText
+                android:id="@+id/other_assets_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Value of Other Assets"
+                android:inputType="numberDecimal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/continueToCalc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:textColor="#00BCD4"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Liabilities Section -->
+
+        <LinearLayout
+            android:id="@+id/liabilityInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/bottom_curved"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="30dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Step 3 of 4"
+                android:textColor="#4DB6AC"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Liabilities and Debts"
+                android:textSize="18sp" />
+
+            <!-- Outstanding Debts Input -->
+            <TextView
+                android:id="@+id/debts_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Debts (BDT)" />
+
+            <EditText
+                android:id="@+id/debts_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your debts and obligations"
+                android:inputType="numberDecimal" />
+
+            <!-- Expenses Input -->
+            <TextView
+                android:id="@+id/expense_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Expenses (tax, rent, bills)" />
+
+            <EditText
+                android:id="@+id/expense_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Unpaid tax, rent, bills, etc."
+                android:inputType="numberDecimal" />
+
+            <!-- Other expenses Input -->
+            <TextView
+                android:id="@+id/other_expense_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Other Expenses (BDT)" />
+
+            <EditText
+                android:id="@+id/other_expense_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Other unpaid expenses"
+                android:inputType="numberDecimal" />
+
+            <!-- Submit Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/calculate_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/two_color_curved"
+                android:paddingHorizontal="24dp"
+                android:text="Calculate Zakat"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
 
 
     </LinearLayout>

@@ -16,7 +16,7 @@
         android:theme="@style/Theme.ZakatCalculator"
         tools:targetApi="31">
         <activity
-            android:name=".CalculationResult"
+            android:name=".Faq"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -30,6 +30,7 @@
         </activity> <!-- Other activity declaration -->
         <activity android:name=".WebLoader" />
         <activity android:name=".CalculateZakat" />
+        <activity android:name=".CalculationResult" />
     </application>
 
 </manifest>
