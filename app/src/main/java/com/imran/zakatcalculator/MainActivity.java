@@ -1,5 +1,7 @@
 package com.imran.zakatcalculator;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +9,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.OnBackPressedCallback;
+import androidx.activity.OnBackPressedDispatcher;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -15,6 +19,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     LinearLayout blog1, blog2, blog3;
     Button goldRate, silverRate, calculateZakat, faqButton;
+
+    public OnBackPressedDispatcher dispatcher = getOnBackPressedDispatcher();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +103,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //onBackPressedDispatcher for exit confirmation
+        setDispatcher(dispatcher);
 
+    }
+
+    //onBackPressedDispatcher for exit confirmation
+
+    public void setDispatcher(OnBackPressedDispatcher dispatcher) {
+        this.dispatcher = dispatcher;
+        dispatcher.addCallback(new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setIcon(R.mipmap.ic_launcher_round)
+                        .setTitle("Confirm Exit")
+                        .setMessage("Do you want to exit?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                                finishAndRemoveTask();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        })
+                        .show();
+            }
+        });
     }
 }
